@@ -1,13 +1,12 @@
 version: '3.8'
 services:
-  prompost-postgres:
+  kkbank-postgres:
     image: postgres:14.2
     restart: on-failure
-    # volumes:
-    #   - ~/volumes/jhipster/prompostavka/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=prompostavka
-      - POSTGRES_PASSWORD=feFesf24WEsd6.ааыуУЫАв!_
+      - POSTGRES_DB=kkbank
+      - POSTGRES_USER=kkuser
+      - POSTGRES_PASSWORD=123456987
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
-      - 127.0.0.1:5432:5432
+      - "127.0.0.1:5432:5432"

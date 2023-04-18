@@ -7,11 +7,11 @@ import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
 @Service
-public class TaskQueue {
+public class TaskQueueService {
     private final Queue<Task> queue;
-    private static int MAX_SIZE = 20;
+    private static final int MAX_SIZE = 5;
 
-    public TaskQueue() {
+    public TaskQueueService() {
         this.queue = new ArrayBlockingQueue<>(MAX_SIZE);
     }
 
